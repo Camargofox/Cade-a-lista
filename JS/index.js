@@ -10,7 +10,7 @@ let listaDeCompras = [];
 // ==========================================
 // FUNÇÃO: Cria a linha na tabela (HTML)
 // ==========================================
-function adicionarLinhaNaTabela(produto, quantidade) {
+function adicionarLinhaNaTabela(produto, quantidade, concluido = false) {
     // Cria a linha (tr)
     const novaTr = document.createElement('tr');
 
@@ -31,7 +31,13 @@ function adicionarLinhaNaTabela(produto, quantidade) {
     //Cria o checkbox, estiliza e coloca no tdCheck
     const inputCheck = document.createElement('input');
     inputCheck.type = 'checkbox';
+    inputCheck.checked = concluido;
     tdCheck.appendChild(inputCheck);
+    
+    // Se o item está concluído, adiciona a classe riscado
+    if (concluido) {
+        novaTr.classList.add('riscado');
+    }
     
     inputCheck.addEventListener('change', () => {
       
@@ -41,6 +47,13 @@ function adicionarLinhaNaTabela(produto, quantidade) {
     } else {
     
         novaTr.classList.remove('riscado')
+    }
+    
+    // Atualiza o estado no localStorage
+    const itemParaAtualizar = listaDeCompras.find(item => item.produto === produto);
+    if (itemParaAtualizar) {
+        itemParaAtualizar.concluido = inputCheck.checked;
+        salvarNoLocalStorage();
     }
     });
 
@@ -78,6 +91,7 @@ function adicionarLinhaNaTabela(produto, quantidade) {
     
     
     
+    
 }    
 
 // // ==========================================
@@ -96,7 +110,7 @@ function carregarListaSalva() {
 
         // Passa por cada objeto salvo e reconstrói a linha na tabela
         listaDeCompras.forEach(item => {
-            adicionarLinhaNaTabela(item.produto, item.quantidade);
+            adicionarLinhaNaTabela(item.produto, item.quantidade, item.concluido);
         });
     }
 }
@@ -121,7 +135,8 @@ botao.addEventListener('click', function () {
     // 2. Guarda na array como um Objeto { produto, quantidade }
     listaDeCompras.push({
         produto: valorDigitado1,
-        quantidade: valorDigitado2
+        quantidade: valorDigitado2,
+        concluido: false
     });
 
     // 3. Salva a nova versão da array no localStorage
