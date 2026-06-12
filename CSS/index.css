@@ -1,0 +1,311 @@
+/*variaveis*/
+:root {
+  --tamanho-base: 10px;
+  /* Altere apenas aqui */
+  --cor-primaria: linear-gradient(-60deg, #0008ff, #000000);
+  --cor-borda: #ccc;
+}
+
+
+/* css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  background: var(--cor-primaria);
+  height: 100vh;
+}
+
+.container {
+  width: 97%;
+  height: 93vh;
+  border-radius: 8px;
+  padding: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+.container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-top: 20px;
+
+}
+
+.all {
+  padding: var(--tamanho-base);
+
+}
+
+.mercado-e-lista {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+.d-flex {
+  display: flex;
+  gap: 4px;
+}
+
+.btn {
+  padding: 4px 12PX;
+  background: #2563EB;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
+  display: inline-flex;
+  align-items: center;
+  margin: 10px 2px 0 0;
+}
+
+#container-itens-cadastrados {
+  margin-top: 20px;
+  max-height: 380px;
+  overflow-y: auto;
+  border: 1px solid #cccccc00;
+  border-radius: 0 0 20px 15px;
+}
+table {
+  width: 100%;
+  font-family: 'Syne', sans-serif;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 8px;
+}
+
+thead th {
+  background: #F8FAFC;
+  color: #64748B;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 13px 16px;
+  border-bottom: 1px solid #E2E8F0;
+  border-radius: 0;
+  /* para garantir que as bordas arredondadas sejam aplicadas apenas nos cantos */
+
+}
+
+th:first-child {
+  border-radius: 20px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 20px 0 0;
+}
+
+td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+td {
+  color: #000;
+  font-size: 0.9rem;
+  background: #f4f4f4;
+  font-weight: bold;
+  padding: 1px 10px;
+  font-weight: 400;
+  border-bottom: 1px solid #E2E8F0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.jc-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #282a36;
+}
+
+input[type="checkbox"] {
+  width: Calc(var(--tamanho-base) + 5px);
+  height: Calc(var(--tamanho-base) + 5px);
+  margin: 1rem;
+}
+
+input,
+select {
+  width: 200px;
+  padding: 2px;
+  border: 1px solid #7a43e78c;
+  border-radius: 4px;
+}
+
+#inp-qtd {
+  width: 42px;
+  padding: 2px;
+  border: 1px solid #7a43e78c;
+  border-radius: 4px;
+}
+
+.btn-d {
+
+  width: 50px;
+  margin: 10px;
+  padding: 4px;
+  background: #ff000080;
+  border: 1px solid #ff000075;
+  border-radius: 6px;
+  color: #080808;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.riscado{
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.2;
+}
+
+.contagemItem{
+  padding: 10px 0 10px 0;
+  font-weight: bold;
+}
+
+@media (max-width: 550px) {
+
+  #container-itens-cadastrados {
+  margin-top: 20px;
+  max-height: 480px;
+  overflow-y: auto;
+  border: 1px solid #cccccc00;
+  border-radius: 0 0 20px 15px;
+  }
+
+  .mercado-e-lista {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+  form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .thead th {
+    color: #64748B;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 13px 16px;
+    border-bottom: 1px solid #E2E8F0;
+    text-align: left;
+    border-radius: 0;
+    /* para garantir que as bordas arredondadas sejam aplicadas apenas nos cantos */
+
+  }
+
+  .jc-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 4px 12px;
+    background: #2563EB;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
+    margin: 8px;
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  #container-itens-cadastrados {
+  /* margin-top: 10px;  */ 
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #cccccc00;
+  border-radius: 0 0 20px 15px;
+  }
+
+  .mercado-e-lista {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+  form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .thead th {
+    color: #64748B;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 13px 16px;
+    border-bottom: 1px solid #E2E8F0;
+    text-align: left;
+    border-radius: 0;
+    /* para garantir que as bordas arredondadas sejam aplicadas apenas nos cantos */
+
+  }
+
+  .jc-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 4px 12px;
+    background: #2563EB;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
+    margin: 8px;
+    text-align: center;
+  }
+
+}

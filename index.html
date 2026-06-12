@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Cade a lista?</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Lista de Compras</h1>
+    <div class="all">
+        <div class="mercado-e-lista">
+          <div class="container-mercado">
+            <label for="mercado">Qual mercado que você está?
+              <select id="mercado">
+                <option value="atacadaoC">Atacadão Cupece</option>
+                <option value="clubeC">Club de Campo</option>
+                <option value="coop">Coop</option>
+                <option value="shibata">Shibata</option>
+                <option value="assaiB">Assaí Brás Cubas</option>
+                <option value="assaiMog">Assaí Mogilar</option>
+                <option value="atacadaoIp">Atacadão Ipiranga</option>                              
+              </select>
+            </label>
+          </div>
+          <form>
+            <div>
+              <label for="inp-produto">Item da lista</label>
+              <input type="text" id="inp-produto" placeholder="Digite o item aqui" />
+            </div>
+            <div>
+              <label for="inp-qtd">Qtd:</label>
+              <input type="number" id="inp-qtd" placeholder="Qtd" />
+            </div>
+          </form>
+          <button id="enviar" class="btn">Listar</button>
+        </div>
+
+        <!--==================Thead da tabela=====-->
+        <div id="container-itens-cadastrados">
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Qtd</th>
+                <th>Preço</th>
+                <th colspan="2">Ações</th>
+              </tr>
+            </thead>
+            <!--==================Tbody da tabela=====-->
+            <tbody id="corpoTabela">
+            </tbody>
+          </table>         
+        </div>
+      </main>
+      <div class="contagemItem">
+        <p>Total de itens: <span id="contador">0</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
