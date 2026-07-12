@@ -210,7 +210,7 @@ select {
 
 
 
-@media (max-width: 370px) {
+/* @media (max-width: 370px) {
 
   #container-itens-cadastrados {
     margin-top: 20px;
@@ -263,7 +263,7 @@ select {
     margin-top: 8px;
   }
 
-}
+} */
 
 @media (max-width: 400px) {
   form {
