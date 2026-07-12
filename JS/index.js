@@ -17,9 +17,10 @@ function adicionarLinhaNaTabela(produto, quantidade, concluido = false) {
     // Cria as células (td)
     const tdProduto = document.createElement('td');
     const tdQuantidade = document.createElement('td');
-    const tdVazia = document.createElement('td');
+    const tdPreco = document.createElement('td');
     const tdBtnExcluir = document.createElement('td');
     const tdCheck = document.createElement('td');
+
     
     // Cria o botão de excluir e estiliza com a sua classe CSS
     const botaoDel = document.createElement('button');
@@ -60,12 +61,12 @@ function adicionarLinhaNaTabela(produto, quantidade, concluido = false) {
     // Preenche os dados
     tdProduto.textContent = produto;
     tdQuantidade.textContent = quantidade;
-    tdVazia.textContent = "-";
+    tdPreco.textContent = "R$";// Aqui você pode adicionar a lógica para calcular o preço, se necessário----------------------------<>
 
     // Coloca as células dentro da linha
     novaTr.appendChild(tdProduto);
     novaTr.appendChild(tdQuantidade);
-    novaTr.appendChild(tdVazia);  
+    novaTr.appendChild(tdPreco);  
     novaTr.appendChild(tdBtnExcluir);
     novaTr.appendChild(tdCheck);
 
