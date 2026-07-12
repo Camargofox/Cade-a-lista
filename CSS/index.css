@@ -46,6 +46,12 @@ body {
 
 }
 
+/* Deixei desabilitado para futura implementação */
+.container-mercado{
+  display: none;
+}
+/* Deixei desabilitado para futura implementação */
+
 .all {
   padding: var(--tamanho-base);
 
@@ -75,7 +81,6 @@ form {
 
 .btn {
   background-color: #2563EB;
-  ;
   color: white;
   border: none;
   padding: 12px;
@@ -155,6 +160,7 @@ td {
 label {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
   font-size: 14px;
   color: #64748b;
   font-weight: 600;
