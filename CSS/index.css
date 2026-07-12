@@ -35,15 +35,21 @@ body {
 }
 
 .container h1 {
+
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 15px;
   color: #0f172a;
   align-items: center;
   gap: 10px;
 
+}
+
+i {
+  color: #2563EB;
+  font-size: 28px;
 }
 
 /* Deixei desabilitado para futura implementação */
