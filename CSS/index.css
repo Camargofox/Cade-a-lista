@@ -265,7 +265,7 @@ select {
 
 } */
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   form {
     display: flex;
     flex-direction: column;
