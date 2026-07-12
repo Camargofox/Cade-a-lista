@@ -27,7 +27,6 @@ body {
 .container {
   width: 100%;
   max-width: 600px;
-  height: 100%;
   border-radius: 8px;
   padding: 8px;
   background: #ffffff;
@@ -75,20 +74,21 @@ form {
 }
 
 .btn {
-    background-color: #2563EB;;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background-color 0.2s;
-    margin-top: 8px;
+  background-color: #2563EB;
+  ;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  margin-top: 8px;
 }
 
 #container-itens-cadastrados {
@@ -98,6 +98,7 @@ form {
   border: 1px solid #cccccc00;
   border-radius: 0 0 20px 15px;
 }
+
 table {
   width: 100%;
   font-family: 'Syne', sans-serif;
@@ -116,8 +117,6 @@ thead th {
   padding: 13px 16px;
   border-bottom: 1px solid #E2E8F0;
   border-radius: 0;
-  /* para garantir que as bordas arredondadas sejam aplicadas apenas nos cantos */
-
 }
 
 th:first-child {
@@ -183,10 +182,6 @@ select {
   transition: border-color 0.2s;
 }
 
-#inp-qtd, #inp-preco{
-  width: 80px;
-}
-
 .btn-d {
 
   width: 50px;
@@ -201,13 +196,13 @@ select {
   cursor: pointer;
 }
 
-.riscado{
+.riscado {
   text-decoration: line-through;
   color: gray;
   opacity: 0.2;
 }
 
-.contagemItem{
+.contagemItem {
   padding: 10px 0 10px 0;
   font-weight: bold;
 }
@@ -215,7 +210,7 @@ select {
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 370px) {
 
   #container-itens-cadastrados {
     margin-top: 20px;
@@ -251,19 +246,8 @@ select {
   }
 
   .btn {
-    /* padding: 4px 12px;
-    background: #2563EB;
-    border: none;
-    border-radius: 7px;
-    color: #fff;
-    font-size: 12.5px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
-    margin: 8px;
-    text-align: center; */
-
-    background-color: #2563EB;;
+    background-color: #2563EB;
+    ;
     color: white;
     border: none;
     padding: 12px;
@@ -278,5 +262,21 @@ select {
     transition: background-color 0.2s;
     margin-top: 8px;
   }
+
+}
+
+@media (max-width: 400px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container {
+    width: 92%;
+    margin-top: 14px;
+
+  }
+
 
 }
